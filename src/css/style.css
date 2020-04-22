@@ -1,0 +1,179 @@
+
+#text-banner h1{
+    font-size: 100px;
+}
+#text-banner p{
+    font-size: 30px;
+}
+.banner{
+    /* background-color: rgb(202, 251, 235); */
+}
+#home-container{
+    height: 100vh !important;
+}
+.bg-container{
+    background-color: #e4effa;
+}
+.text-recover-new{
+    color: #38d5f1 !important;
+}
+.text-recover{
+    color: #55bfd1 !important;
+}
+
+.text-death-new{
+    color: #ff61e2 !important;
+}
+.text-death{
+    color: #cc44b3 !important;
+}
+.text-confirm-new{
+    color: #cfd3ff !important;
+}
+.text-confirm{
+    color: #6e7aff !important;
+}
+.navigation{
+    border-bottom: 0px solid #6e7aff !important;
+}
+.navigation:hover{
+    transition: ease-in 0.1s;
+    margin-top: -2px;
+    border-bottom: 2px solid #6e7aff !important;
+}
+
+.active{
+    margin-top: -2px;
+    border-bottom: 2px solid #6e7aff !important;
+}
+.select-picker{
+    background: none;
+}
+
+#navbar-lg{
+    display: block;
+    position: fixed;
+    z-index: 2;
+}
+
+
+#form-search{
+    justify-content: start;
+    padding: 0;
+}
+
+#form-search input{
+    background: none;
+}
+
+
+#bg-container-widget{
+    height: auto;
+}
+
+.center-vertical{
+    margin-top: 30vh !important;
+}
+#home-button-mobile{
+    display: none;
+}
+#home-button-lg{
+    display: block;
+}
+#mobile-copyright{
+    display: none !important;
+}
+@media (max-width: 575.98px) { 
+    #mobile-copyright{
+        display: block !important;
+    }
+    #desktop-copyright{
+        display: none !important;
+    }
+    #navbar-lg{
+        display: none !important;
+        background-color: black;
+    }
+    #home-button-lg{
+        display: none;
+    }
+    
+    #home-button-mobile{
+        padding: 10px 0;
+        display: block;
+        position: fixed !important;
+        bottom: 0 !important;
+    }
+
+    #text-banner h1{
+        font-size: 30px;
+    }
+    #text-banner p{
+        font-size: 14px;
+    }
+    
+    #form-search{
+        position: relative;
+        margin-top: 0;
+        justify-content: center;
+    }  
+    
+    #bg-container-widget{
+        padding-top: 50px !important;
+        padding-bottom: 50px !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        border-radius: 30px 30px 0 0;
+        background-color: rgb(255, 249, 241);
+        margin-bottom: 0 !important;
+    }
+
+    #header-img{
+        display: none !important;
+    }
+    #swipe-text{
+        display: block !important;
+    }
+ }
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    #navbar-lg{
+        display: block !important
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    #navbar-lg{
+        display: block !important
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    #navbar-lg{
+        display: block !important
+    }
+}
+@media (min-width: 1200px) {
+    #navbar-lg{
+        display: block !important
+    }
+}
+
+.loader{
+    margin: 0 0 2em;
+    height: 100px;
+    width: 20%;
+    text-align: center;
+    padding: 1em;
+    margin: 0 auto 1em;
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  /*
+    Set the color of the icon
+  */
+  svg path,
+  svg rect{
+    fill: #FF6700;
+  }
