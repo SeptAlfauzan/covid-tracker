@@ -7,6 +7,7 @@ import Swal from 'sweetalert2';
 import Illustration from './illustration/Location.png'
 import Loader from './Loader';
 import AOS from 'aos';
+import Fade from 'react-reveal/Fade';
 
 class Home extends React.Component {
     constructor(props) {
@@ -103,16 +104,15 @@ class Home extends React.Component {
             const numeral = require('numeral');
             return (
                 <div id="home-container" className="row col-12 p-md-4 p-0 m-0">
-                    <div data-aos="fade-up"
-                        data-aos-anchor-placement="center-bottom" data-aos-duration="2000" className="col-md-6 col-12 m-0 order-md-2 order-1 ">
+                    <div className="col-md-6 col-12 m-0 order-md-2 order-1 ">
                         <img src={Illustration} alt="banner.jpg" className="col-12 m-0 items-align-start" />
                         <div className="col-12 row text-center" id="desktop-copyright">
-                            <Copyright/>
-                        </div> 
+                            <Copyright />
+                        </div>
                     </div>
                     <div className="order-md-1 order-2 d-flex col-md-6 col-12 m-0 items-align-stretch p-0">
-                        <div data-aos="fade-up"
-                            data-aos-anchor-placement="center-bottom" data-aos-duration="2500" id="bg-container-widget" className="col-12 m-0">
+                        <Fade bottom>
+                        <div id="bg-container-widget" className="col-12 m-0">
                             <div id="text-banner" className="col-12 mt-md-5 mt-0 p-0">
                                 <h1 className="text-death text-banner">Welcome</h1>
                                 <p className="text-secondary" >
@@ -132,45 +132,45 @@ class Home extends React.Component {
                             <h4 className="text-confirm mt-3">World summary</h4>
                             <div className="col-12 m-0 row p-0">
                                 <div className="col-md-5 col-6 p-1 d-flex align-items-stretch m-0">
-                                    <div className="bg-white shadow-sm col-12 m-0 p-2 rounded" data-aos="fade-up"
+                                    <div className="bg-white shadow-sm col-12 m-0 p-2 rounded"
                                         data-aos-anchor-placement="center-bottom" data-aos-duration="2000">
                                         <h5 className="text-secondary">New Recovered</h5>
-                                        <h1 className="text-recover-new text-center">{numeral(this.state.summary.NewRecovered).format('0,0').replace(',','.')}</h1>
+                                        <h5 className="text-recover-new text-center">{numeral(this.state.summary.NewRecovered).format('0,0').replace(',', '.')}</h5>
                                     </div>
                                 </div>
                                 <div className="col-md-7 col-6 p-1 d-flex align-items-stretch m-0">
-                                    <div className="bg-white shadow-sm col-12 m-0 p-2 rounded" data-aos="fade-up"
+                                    <div className="bg-white shadow-sm col-12 m-0 p-2 rounded"
                                         data-aos-anchor-placement="center-bottom" data-aos-duration="2250">
                                         <h5 className="text-secondary">Total Recovered</h5>
-                                        <h1 className="text-recover text-center">{numeral(this.state.summary.TotalRecovered).format('0,0').replace(',','.')}</h1>
+                                        <h5 className="text-recover text-center">{numeral(this.state.summary.TotalRecovered).format('0,0').replace(',', '.')}</h5>
                                     </div>
                                 </div>
                                 <div className="col-md-6 col-6 p-1 d-flex align-items-stretch m-0">
-                                    <div className="bg-white shadow-sm col-12 m-0 p-2 rounded" data-aos="fade-up"
+                                    <div className="bg-white shadow-sm col-12 m-0 p-2 rounded"
                                         data-aos-anchor-placement="center-bottom" data-aos-duration="2500">
                                         <h5 className="text-secondary">New Death</h5>
-                                        <h1 className="text-death-new text-center">{numeral(this.state.summary.NewDeaths).format('0,0').replace(',','.')}</h1>
+                                        <h5 className="text-death-new text-center">{numeral(this.state.summary.NewDeaths).format('0,0').replace(',', '.')}</h5>
                                     </div>
                                 </div>
                                 <div className="col-md-6 col-6 p-1 d-flex align-items-stretch m-0">
-                                    <div className="bg-white shadow-sm col-12 m-0 p-2 rounded" data-aos="fade-up"
+                                    <div className="bg-white shadow-sm col-12 m-0 p-2 rounded"
                                         data-aos-anchor-placement="center-bottom" data-aos-duration="2750">
                                         <h5 className="text-secondary">Total Deaths</h5>
-                                        <h1 className="text-death text-center">{numeral(this.state.summary.TotalDeaths).format('0,0').replace(',','.')}</h1>
+                                        <h5 className="text-death text-center">{numeral(this.state.summary.TotalDeaths).format('0,0').replace(',', '.')}</h5>
                                     </div>
                                 </div>
                                 <div className="col-md-5 col-12 p-1 m-0">
-                                    <div className="bg-white shadow-sm col-12 m-0 p-2 rounded" data-aos="fade-up"
+                                    <div className="bg-white shadow-sm col-12 m-0 p-2 rounded"
                                         data-aos-anchor-placement="center-bottom" data-aos-duration="3000">
                                         <h5 className="text-secondary">New Confirmed</h5>
-                                        <h1 className="text-confirm text-center">{numeral(this.state.summary.NewConfirmed).format('0,0').replace(',','.')}</h1>
+                                        <h5 className="text-confirm text-center">{numeral(this.state.summary.NewConfirmed).format('0,0').replace(',', '.')}</h5>
                                     </div>
                                 </div>
                                 <div className="col-md-7 col-12 p-1 m-0">
-                                    <div className="bg-white shadow-sm col-12 m-0 p-2 rounded" data-aos="fade-up"
+                                    <div className="bg-white shadow-sm col-12 m-0 p-2 rounded"
                                         data-aos-anchor-placement="center-bottom" data-aos-duration="3000">
                                         <h5 className="text-secondary">Total Confirmed</h5>
-                                        <h1 className="text-confirm text-center">{numeral(this.state.summary.TotalConfirmed).format('0,0').replace(',','.')}</h1>
+                                        <h5 className="text-confirm text-center">{numeral(this.state.summary.TotalConfirmed).format('0,0').replace(',', '.')}</h5>
                                     </div>
                                 </div>
                             </div>
@@ -178,6 +178,7 @@ class Home extends React.Component {
                                 <Copyright />
                             </div>
                         </div>
+                        </Fade>
                     </div>
                 </div>
             );
